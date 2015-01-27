@@ -1,7 +1,7 @@
 # noise
 Perlin noise function generator
 
-Most implementations of the perlin noise algorithm are bounded. This one however is not. The generator returns an object representation of the 
+Most implementations of the perlin noise algorithm are bounded by width and height. This one however is not. The generator returns an object representation of the 
 perlin noise function f:R^2 -> [-1,1]. 
 
 In theory the noise function is unbounded. However, the randomly generated gradients for a given gridpoint must be the same with every lookup and are stored in memory. Therefore the noise function is only bounded by memory.
