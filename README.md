@@ -46,4 +46,13 @@ Noise compoundNoise = new Noise() {
 };
 ```
 ![Compound 1](https://github.com/sonsyphon/noise/blob/master/docs/compound1.png)
-
+```java
+final Noise perlinNoise = generator.generate();
+Noise compoundNoise = new Noise() {
+  @Override
+  public float get(float x, float y) {
+    return Math.round(perlinNoise.get(x,y)*5)/5f;
+  }
+};
+```
+![Compound 1](https://github.com/sonsyphon/noise/blob/master/docs/compound3.png)
