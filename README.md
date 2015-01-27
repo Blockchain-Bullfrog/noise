@@ -30,6 +30,7 @@ Noise cloud = new Cloud(perlinNoise,5);
 ![Compound 1](https://github.com/sonsyphon/noise/blob/master/docs/compound2.png)
 
 ### Function composition
+The cloud is a particular function composition. It is possible to build your own compositions. To remain consistent with the code you can implement to the Noise interface.
 ```java
 final Noise perlinNoise = generator.generate();
 
@@ -37,10 +38,10 @@ Noise compoundNoise = new Noise() {
   @Override
   public float get(float x, float y) {
     return
-      Math.abs(basicNoise.get(x,y)) +
-      Math.abs(1/2f*basicNoise.get(x/2f, y/2f)) +
-      Math.abs(1/4f*basicNoise.get(x/4f, y/4f)) +
-      Math.abs(1/8f*basicNoise.get(x/8f, y/8f));
+      Math.abs(perlinNoise.get(x,y)) +
+      Math.abs(1/2f*perlinNoise.get(x/2f, y/2f)) +
+      Math.abs(1/4f*perlinNoise.get(x/4f, y/4f)) +
+      Math.abs(1/8f*perlinNoise.get(x/8f, y/8f));
   }
 };
 ```
