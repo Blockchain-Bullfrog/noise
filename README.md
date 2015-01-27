@@ -39,3 +39,8 @@ Noise compoundNoise = new Noise() {
 
 float noiseValue = compoundNoise.get(20.5f,31.2f);
 ```
+The image below shows a possible result of this composition.
+
+
+![Compound 1](https://github.com/sonsyphon/noise/blob/master/docs/compound1.png)
+
