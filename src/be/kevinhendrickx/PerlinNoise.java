@@ -20,8 +20,8 @@ public class PerlinNoise implements Noise {
         // for each i compute the inner product G_i * (P - Q_i)
         int xFloor = (int) Math.floor(x);
         int yFloor = (int) Math.floor(y);
-        int xCeil = (int) Math.ceil(x);
-        int yCeil = (int) Math.ceil(y);
+        int xCeil = xFloor+1;
+        int yCeil = yFloor +1;
         Gradient upperLeftGradient = gradientGrid.get(xFloor, yCeil);
         Gradient upperRightGradient = gradientGrid.get(xCeil,yCeil);
         Gradient lowerLeftGradient = gradientGrid.get(xFloor,yFloor);
