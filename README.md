@@ -22,6 +22,7 @@ Noise noise3 = generator.generate();
 float noiseValue = noise1.get(20.5f,31.2f);
 ```
 #### Clouds
+The cloud is a convergent series. The second parameter in the Cloud constructor denotes the amount of terms "n".
 ```java
 Noise perlinNoise = generator.generate();
 Noise cloud = new Cloud(perlinNoise,5);
