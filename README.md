@@ -21,10 +21,16 @@ Noise noise3 = generator.generate();
 ```java
 float noiseValue = noise1.get(20.5f,31.2f);
 ```
+#### Clouds
+```java
+Noise perlinNoise = generator.generate();
+Noise cloud = new Cloud(perlinNoise,5);
+```
+![Compound 1](https://github.com/sonsyphon/noise/blob/master/docs/compound2.png)
 
 ### Function composition
 ```java
-final Noise basicNoise = generator.generate();
+final Noise perlinNoise = generator.generate();
 
 Noise compoundNoise = new Noise() {
   @Override
@@ -36,11 +42,6 @@ Noise compoundNoise = new Noise() {
       Math.abs(1/8f*basicNoise.get(x/8f, y/8f));
   }
 };
-
-float noiseValue = compoundNoise.get(20.5f,31.2f);
 ```
-The image below shows a possible result of this composition.
-
-
 ![Compound 1](https://github.com/sonsyphon/noise/blob/master/docs/compound1.png)
 
