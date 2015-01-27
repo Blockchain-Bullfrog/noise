@@ -1,6 +1,7 @@
 package be.kevinhendrickx;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -10,8 +11,8 @@ public class GradientGrid {
     private HashMap<Coordinate,Gradient> gradients;
     private Random random;
 
-    public GradientGrid(Random random) {
-        gradients = new HashMap<Coordinate,Gradient>();
+    public GradientGrid(Random random,int initialCapacity) {
+        gradients = new HashMap<Coordinate, Gradient>(initialCapacity);
         this.random = random;
     }
 

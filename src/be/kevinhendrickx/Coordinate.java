@@ -27,8 +27,8 @@ public class Coordinate {
 
     public int hashCode()
     {
-        int result = (int) (x ^ (x >>> 32));
-        result = 31 * result + (int) (y ^ (y >>> 32));
-        return result;
+        int hash = 7;
+        hash = 71 * hash + this.x;
+        return 71 * hash + this.y;
     }
 }

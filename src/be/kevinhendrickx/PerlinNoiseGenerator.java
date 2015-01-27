@@ -7,6 +7,6 @@ import java.util.Random;
  */
 public class PerlinNoiseGenerator {
     public Noise generate() {
-        return new PerlinNoise(new GradientGrid(new Random()));
+        return new PerlinNoise(new GradientGrid(new Random(),500000));
     }
 }
