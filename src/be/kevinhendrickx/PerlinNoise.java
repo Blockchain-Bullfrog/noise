@@ -5,15 +5,11 @@ import java.lang.Math;
 /**
  * Created by kevin on 1/26/15.
  */
-public class PerlinNoise {
+public class PerlinNoise implements Noise {
     GradientGrid gradientGrid;
 
     public PerlinNoise(GradientGrid gradientGrid) {
         this.gradientGrid = gradientGrid;
-    }
-
-    public float get(Coordinate coordinate) {
-        return this.get(coordinate.x,coordinate.y);
     }
 
     public float get(float x, float y) {
